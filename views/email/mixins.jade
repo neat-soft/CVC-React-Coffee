@@ -1,0 +1,9 @@
+mixin btn(href, clazz)
+	table(class=clazz)
+		tr
+			td
+				a(href=href)
+					if block
+						block
+					else
+						!= href

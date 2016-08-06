@@ -1,0 +1,32 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href=assetPath('landing_page.css'))
+    link(rel="icon" type="image/png" href=assetPath("favicon.ico"))
+    script(language='javascript', src=assetPath('landing_page.js'))
+    title= messages.landingPage.pageTitle
+    meta(name="google-site-verification" content=siteDefinition.googleSiteVerification)
+    meta(name="description", content=messages.landingPage.metaDescription)
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-touch-fullscreen", content="YES")
+  body(class=[siteClass, language, 'fixed-max-width', 'narrow'])
+    if(confirmTrackingGuid)
+      img(src="/tg/#{confirmTrackingGuid}.gif", style="position:fixed;top:0;left:0")
+    .background
+      .outer
+        .inner
+    .outer
+      .inner
+        .header
+          .outer
+            .inner
+              .logo-container
+                .stacked-logo
+                .long-logo
+                .fade-down
+        
+        block content
+
+        include ./footer.jade
+    include ./external_scripts.jade

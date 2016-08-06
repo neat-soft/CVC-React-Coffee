@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div.content
+    h5 Hey #{username},
+    br
+    p #[a(href=href("/app/profile/#{sender.guid}")) #[b #[i #{sender.username}]]] likes you!
+    br
+    p Check them out by clicking #[a(href=href("/app/profile/#{sender.guid}")) here]
+    p 
+      strong Hitting reply to this email will NOT send a message to anyone.
+      | You must log on to #[a(href=href("/app/conversation/#{sender.guid}")) CurvesConnect.com] to send messages.
+    p
+      |Thanks,
+      br
+      i The CurvesConnect.com Team

@@ -1,0 +1,28 @@
+extends layouts/landing
+
+mixin formField(form, type, fieldName, formMessages, classes)
+  .field(class = (form.errors[fieldName]!=null ?  'has-errors': ''), class = classes)
+    label(for=fieldName)= formMessages[fieldName]
+    input(name=fieldName, type=type, placeholder=formMessages[fieldName], value=form[fieldName])
+    .suggestion
+      span=messages.common.form.suggestionPrefix
+      | &nbsp
+      span.value
+      span=messages.common.form.suggestionSuffix
+    if form.errors[fieldName]!=null
+      .error-message=lookupErrorMessage(messages, formMessages, fieldName, form.errors[fieldName])
+
+block content
+  if fullScreenErrorMessage
+    .full-screen-error=messages.registrationForm[fullScreenErrorMessage]
+  else
+    .form
+      form(method='post', type='application/x-www-form-urlencoded')
+        +formField(form, "text", "emailAddress", messages.common.form, 'email-address')
+        +formField(form, "password", "password", messages.common.form)
+        .buttons
+          .button.square.submit-button.large
+            button(type="submit")=messages.common.signInButton
+          .link
+            a(href="/forgot_password")= messages.common.forgotYourPasswordButton
+            a(href="/")= messages.common.createAccountButton

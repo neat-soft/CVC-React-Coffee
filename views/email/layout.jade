@@ -1,0 +1,31 @@
+extends boilerplate
+
+block boilerplate-content
+  table.container: tr
+    td
+      table.row.header: tr
+        td
+          img.logo(src=assetPath('{siteId}/long-logo-white-email.png'), width="100%", height="100%")
+        td.expander
+      table.content-container: tr: td
+        block content
+        p.links
+          a(href=href("/tos"))= messages.common.termsOfService
+          a(href=href("/privacy_policy"))= messages.common.privacyPolicy          
+          a(href=href("/app/settings/email_preferences"))= messages.common.emailPreferences
+        p.disclaimer
+          | #{messages.emails.disclaimer}
+          br
+          br
+          | #{messages.emails.messageSentTo(emailAddress, username)}
+          br
+          br
+          | #{messages.emails.unsubscribeFromThisType}
+          | &nbsp;
+          a(href=href("/unsubscribe/#{template}")) #{messages.emails.clickHere}
+          br
+          br
+          | #{messages.emails.unsubscribeFromAll}
+          | &nbsp;
+          a(href=href("/unsubscribe/all")) #{messages.emails.clickHere}
+    td.expander

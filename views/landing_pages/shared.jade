@@ -1,0 +1,46 @@
+extends ../layouts/landing
+
+mixin formField(form, fieldName, type, formMessages, classes)
+  .field(class = (form.errors[fieldName]!=null ?  'has-errors': ''), class = classes)
+    label(for=fieldName)= formMessages[fieldName]
+    input(id=fieldName, name=fieldName, type=type, autocomplete="off", autocorrect="off", autocapitalize="off", spellcheck="false", placeholder=formMessages[fieldName], value=form[fieldName])
+    .suggestion
+      span=messages.common.form.suggestionPrefix
+      | &nbsp
+      span.value
+      span=messages.common.form.suggestionSuffix
+    if form.errors[fieldName]!=null
+      .error-message=lookupErrorMessage(messages, formMessages, fieldName, form.errors[fieldName])
+
+block content
+  if fullScreenErrorMessage
+    .full-screen-error=messages.registrationForm[fullScreenErrorMessage]
+    .link
+      a(href="/signin")= messages.common.signInButton    
+  else
+    .form
+      form(method='post', type='application/x-www-form-urlencoded')
+        +formField(form, "emailAddress","email", messages.registrationForm, 'email-address')
+        +formField(form, "postalCode", "tel", messages.registrationForm)
+        .field
+          select(name="genders")
+            option(value="FM", selected=form.genders=="FM")= messages.registrationForm.genders.fm
+            option(value="MF", selected=form.genders=="MF")= messages.registrationForm.genders.mf
+            option(value="MM", selected=form.genders=="MM")= messages.registrationForm.genders.mm
+            option(value="FF", selected=form.genders=="FF")= messages.registrationForm.genders.ff
+        +formField(form, "age", "tel", messages.registrationForm)
+        +formField(form, "password", "password", messages.registrationForm)
+        .buttons
+          .button.square.submit-button.large
+            button(type="submit")=messages.registrationForm.joinButton
+          .link
+            a(href="/signin")= messages.common.signInButton
+            a(href="/forgot_password")= messages.common.forgotYourPasswordButton
+            
+  .copy
+    .copy1
+      h2=messages.landingPage.heading1
+      div!=messages.landingPage.copy1
+    .copy2
+      h2=messages.landingPage.heading2
+      div!=messages.landingPage.copy2

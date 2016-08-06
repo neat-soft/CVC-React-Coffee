@@ -1,0 +1,33 @@
+doctype html
+html(style="min-width: 0px;")
+  head
+    link(rel='stylesheet', href=assetPath('app.css'))
+    link(rel="icon" type="image/png" href=assetPath("favicon.ico"))
+    script(language='javascript', src=assetPath('landing_page.js'))
+    title= messages.landingPage.pageTitle
+    meta(name="description", content=messages.landingPage.metaDescription)
+    meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+    meta(name="apple-mobile-web-app-capable" content="yes")
+    meta(name="apple-touch-fullscreen", content="YES")
+  body(class=[siteClass, language, 'fixed-max-width', 'narrow', 'static'])
+    .background
+      .outer
+        .inner
+    .outer
+      .inner
+        .header
+          .outer
+            .inner
+              .logo-container
+                .long-logo-white
+                  a(href="/")
+                .logo-white
+                  a(href="/")
+    
+        .outer-container
+          .inner-container
+            .static-content
+              | !{content}
+        
+        include ./layouts/footer.jade
+    include ./layouts/external_scripts.jade

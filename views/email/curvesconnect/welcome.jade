@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  div.content
+    h5 Hey #{username},
+    br
+    p
+      | We are excited to have you join CurvesConnect.com and are confident you’ll  enjoy using our site. 
+      //| If you believe this account was set up in error, you can close the account by clicking here.
+    p This email confirms that your username is #[b= username]
+    p Your password is: #[b= password]
+    p Remember your username and your password in order to login in the future.
+    p You can always change your password by clicking #[a(href=href("/app/settings/change_password")) here].
+    //p Privacy is important to us. At any point, you may delete your profile by clicking here.
+    p Thanks again for registering. If you have any questions or comments, click here to read our FAQ or feel free to contact us here.
+    p
+      |Thanks,
+      br
+      i The CurvesConnect.com Team

@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "common_libs.js",
+  "sourceRoot": "../..",
+  "sources": [
+    "src/client/common_libs.coffee"
+  ],
+  "names": [],
+  "mappings": ";AAAA;AAAA,MAAA;;EAAA,KAAA,GAAQ,OAAA,CAAQ,OAAR;;EACR,WAAA,GAAc,OAAA,CAAQ,cAAR;;EACd,CAAA,GAAI,OAAA,CAAQ,QAAR;AAFJ"
+}

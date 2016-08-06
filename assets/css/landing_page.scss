@@ -1,0 +1,216 @@
+//= require 'common/site_overrides.styl'
+//= require 'common/fonts.styl'
+@import 'bourbon/_bourbon.scss';
+@import 'common/reset.scss';
+@import 'themes/default.scss';
+@import 'common/responsive.scss';
+@import 'common/ui.scss';
+
+$respond-to-height: 580px;
+
+body, * {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.background {
+  .outer {
+    background-color: $ambience-background-color;
+    .inner {
+      @include main-edge-shadow();
+      background-color: $background-color;
+    }
+  }
+}
+
+.outer {
+  .inner {
+    text-align: center;
+    padding-top: 220px;
+    @media (max-height: ($respond-to-height)) {
+      padding-top: 90px;
+    }
+  }
+}
+
+
+.header {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top:0px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+  .inner {
+    padding-top: 20px;
+    @media (max-height: ($respond-to-height)) {
+      padding-top: 0px;
+    }
+  }
+  .logo-container {
+    display: inline-block;
+    background-color: $background-color;
+    padding: 0px 5px 0px 5px;
+    width: 100%;
+    position: relative;
+  }
+}
+.link {
+  margin: 20px 0px 20px 0px;
+  a {
+    display: inline-block;
+    padding: 10px 10px 0px 10px;
+    color: $default-text-color;
+    text-decoration: none;
+  }
+}
+.form {
+  max-width: 300px;
+  width: 300px;
+  display: inline-block;
+  background-color: $section-background-color;
+  box-shadow: 0px 0px 4px 4px $section-edge-shadow-color;
+  padding: 10px 10px 60px 10px;
+  margin-bottom: 30px;
+  position: relative;
+  label {
+    display:none
+  }
+  .email-address, .login {
+    input {
+      margin-top: 0px;
+    }
+  }
+  .buttons {
+    display: inline-block;
+    position: absolute;
+    width: 300px;
+    left: 0px;
+    bottom: -90px;
+    text-align: center;
+    height: 120px;
+    .button.large {
+      width: 250px;
+      a, button {
+        font-size: 24px !important;
+        font-weight: bold;
+      }
+    }
+  }
+}
+.full-screen-error {
+  display: inline-block;
+  max-width: 400px;
+  margin-top: 50px;
+  white-space: pre-wrap;
+  text-align: left;
+  background-color: darken($background-color, 30%);
+  padding: 30px 15px 30px 15px;
+  color: $primary-color;
+}
+
+.stacked-logo {
+  display: inline-block;
+  width: 100%;
+  height: 180px;
+  max-width: 393px;
+  max-height: 180px;
+  background-position:center center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  @media (max-height: ($respond-to-height)) {
+    display: none;
+  }
+}
+
+.long-logo {
+  display: none;
+  width: 100%;
+  height: 80px;
+  max-width: 400px;
+  max-height: 80px;
+  background-position:center center;
+  background-size:contain;
+  background-repeat: no-repeat;
+  @media (max-height: ($respond-to-height)) {
+    display: inline-block;
+  }
+}
+
+
+.copy {
+  text-align: center;
+  margin-top: 70px;
+  .copy1, .copy2 {
+    display: inline-block;
+    width: 45%;
+    max-width: 450px;
+    min-height: 220px;
+    vertical-align: top;
+    background-color: $section-background-color;
+    h2 {
+      font-weight: bold;
+      display: inline-block;
+      padding: 15px 0px 15px 0px;
+      width: 100%;
+      color: $header-text-color;
+      background-color: $header-background-color;
+    }
+    div {
+      color: $text-color;
+      padding: 10px 15px 10px 15px;
+      line-height: 130%;
+    }
+  }
+  .copy1 {
+    margin-right: 10px;
+  }
+  .copy2 {
+    margin-left: 10px;
+  }
+  @media (max-width: (1200px)) {
+    .copy1, .copy2 {
+      min-height: 260px;
+    }
+  }
+  @media (max-width: (900px)) {
+    .copy1, .copy2 {
+      width: 500px;
+      margin: 20px 0px 0px 0px;
+      min-height: 220px;
+      height: auto;
+    }
+  }
+  @media (max-width: (550px)) {
+    .copy1, .copy2 {
+      width: 100%;
+      max-width: 100%;
+      margin:0px 0px 0px 0px;
+    }
+  }
+}
+.footer {
+  * {
+    font-size: 12px;
+  }
+  position: relative;
+  margin-top: 90px;
+  width: 100%;
+  left: 0px;
+  display: inline-block;
+  .links {
+    margin-bottom: 10px;
+    a {
+      margin: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      color: $default-text-color;
+    }
+  }
+}

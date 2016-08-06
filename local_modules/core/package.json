@@ -1,0 +1,55 @@
+{
+  "name": "core",
+  "version": "1.0.1",
+  "description": "Core framework with promise, di, expect, pool, throttle, utilities",
+  "main": "index.coffee",
+  "private": true,
+  "scripts": {
+    "test": "mocha --reporter spec --compilers coffee:coffee-script/register test/**/*tests.coffee",
+    "install": "coffee -o lib --compile src && coffee --compile index.coffee",
+    "autotest": "watchr autotest.watchr.rb"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/familymediapartners/core.git"
+  },
+  "dependencies": {
+    "aws-sdk": "~2.1",
+    "body-parser": "~1.11.0",
+    "generic-pool": "=2.0.4",
+    "glob": "=3.0.0",
+    "lodash": "~2.4.1",
+    "memwatch-next": "^0.3.0",
+    "moment": "=2.4.0",
+    "node-proxy": "^1.0.0",
+    "should": "*",
+    "winston": "~0.7.3",
+    "winston-papertrail": "~1.0.0"
+  },
+  "peerDependencies": {
+    "mysql": "^2.4.1",
+    "redis": "~0.12.1",
+    "hiredis": "~0.4",
+    "newrelic": ">=1.18.3",
+    "mincer": "~1.2.5",
+    "googleapis": "~3.0.0",
+    "edit-google-spreadsheet": "~0.2.21"
+  },
+  "devDependencies": {
+    "coffee-script": "~1.8.0",
+    "googleapis": "~3.0.0",
+    "edit-google-spreadsheet": "~0.2.21",
+    "redis": "~0.12.1",
+    "hiredis": "~0.4",
+    "newrelic": ">=1.18.3",
+    "mincer": "~1.2.5",
+    "request": "~2.61.0",
+    "mocha": "*",
+    "mysql": "~2.9.0"
+  },
+  "author": "",
+  "license": "PRIVATE",
+  "bugs": {
+    "url": "https://github.com/familymediapartners/core/issues"
+  }
+}

@@ -1,0 +1,13 @@
+extends layouts/landing
+
+block content
+  .form
+    span #{messages.registrationForm.reinstateMessage.replace(/EMAIL_ADDRESS/, emailAddress)}
+    form(method='post', type='application/x-www-form-urlencoded')
+      input(type='hidden', name="emailAddress", value=emailAddress)
+      .buttons
+        .button.square.submit-button.large
+          button(type="submit")=messages.registrationForm.reinstateButton
+        .link
+          a(href="/forgot_password")= messages.common.forgotYourPasswordButton
+          a(href="/")= messages.common.createAccountButton

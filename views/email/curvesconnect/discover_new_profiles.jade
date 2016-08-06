@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+  div.content
+    h5 Hey #{username},
+    br
+    p You have #[b #[i #{newProfilesToDiscover}]] new profiles to discover!
+    p See if any of them pique your interest by clicking #[a(href=href("/app/discover")) here].
+    br
+    p 
+      strong Hitting reply to this email will NOT send your response to anyone.
+      | You must log on to #[a(href=href("/app/discover")) CurvesConnect.com] to communicate with other members.
+    p
+      |Thanks,
+      br
+      i The CurvesConnect.com Team

@@ -1,0 +1,31 @@
+{
+  "name": "css-inline",
+  "version": "0.0.0",
+  "description": "CSS Inliner for emails",
+  "main": "lib/inline.js",
+  "private": true,
+  "scripts": {
+    "test": "mocha --reporter spec --compilers coffee:coffee-script/register test/**/*.coffee",
+    "preinstall": "coffee -o lib --compile src",
+    "autotest": "supervisor -w src,test,local_modules -q -n exit -x mocha -- test/*.coffee --colors --compilers coffee:coffee-script/register --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/familymediapartners/css-inline.git"
+  },
+  "dependencies": {
+    "coffee-script": "~1.9.3",
+    "jade": "~1.11.0",
+    "styliner": "^0.8.8",
+    "mincer": "~1.2.5"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "author": "",
+  "license": "PRIVATE",
+  "bugs": {
+    "url": "https://github.com/familymediapartners/css-inline/issues"
+  }
+}

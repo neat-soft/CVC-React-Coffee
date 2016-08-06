@@ -1,0 +1,85 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '--local',
+1 verbose cli   './local_modules/css-line' ]
+2 info using npm@2.15.5
+3 info using node@v4.4.5
+4 verbose install initial load of /Volumes/Project/React/cvc/package.json
+5 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/body-parser/package.json
+6 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/browserify/package.json
+7 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/coffee-script/package.json
+8 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/coffeeify/package.json
+9 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/connect-multiparty/package.json
+10 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/cookie-parser/package.json
+11 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/core/package.json
+12 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/css-inline/package.json
+13 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/edit-google-spreadsheet/package.json
+14 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/ejs/package.json
+15 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/express/package.json
+16 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/googleapis/package.json
+17 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/grunt/package.json
+18 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/grunt-browserify/package.json
+19 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/grunt-contrib-watch/package.json
+20 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/grunt-shell/package.json
+21 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/hiredis/package.json
+22 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/intl/package.json
+23 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/jade/package.json
+24 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/lodash/package.json
+25 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/mailgun-js/package.json
+26 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/markdown/package.json
+27 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/marked/package.json
+28 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/memwatch-next/package.json
+29 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/mincer/package.json
+30 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/mocha/package.json
+31 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/moment/package.json
+32 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/mysql/package.json
+33 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/newrelic/package.json
+34 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/node-sass/package.json
+35 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/node-zendesk/package.json
+36 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/nodemon/package.json
+37 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/react/package.json
+38 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/react-canvas/package.json
+39 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/redis/package.json
+40 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/request/package.json
+41 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/should/package.json
+42 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/source-map-support/package.json
+43 verbose installManyTop reading scoped package data from /Volumes/Project/React/cvc/node_modules/stylus/package.json
+44 info package.json grunt@0.4.5 No license field.
+45 info package.json grunt-contrib-watch@0.6.1 No license field.
+46 info package.json grunt-browserify@4.0.1 No license field.
+47 info package.json markdown@0.5.0 No license field.
+48 info package.json mincer@1.2.5 license should be a valid SPDX license expression
+49 info package.json mocha@2.5.3 No README data
+50 info package.json node-zendesk@1.1.8 No license field.
+51 info package.json edit-google-spreadsheet@0.2.21 No license field.
+52 info package.json memwatch-next@0.3.0 No license field.
+53 info package.json newrelic@1.20.2 No license field.
+54 info package.json redis@0.12.1 No license field.
+55 verbose readDependencies loading dependencies from /Volumes/Project/React/cvc/package.json
+56 silly cache add args [ './local_modules/css-line', null ]
+57 verbose cache add spec ./local_modules/css-line
+58 silly cache add parsed spec Result {
+58 silly cache add   raw: './local_modules/css-line',
+58 silly cache add   scope: null,
+58 silly cache add   name: null,
+58 silly cache add   rawSpec: './local_modules/css-line',
+58 silly cache add   spec: '/Volumes/Project/React/cvc/local_modules/css-line',
+58 silly cache add   type: 'local' }
+59 error addLocal Could not install /Volumes/Project/React/cvc/local_modules/css-line
+60 verbose stack Error: ENOENT: no such file or directory, open '/Volumes/Project/React/cvc/local_modules/css-line'
+60 verbose stack     at Error (native)
+61 verbose cwd /Volumes/Project/React/cvc
+62 error Darwin 15.4.0
+63 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "--local" "./local_modules/css-line"
+64 error node v4.4.5
+65 error npm  v2.15.5
+66 error path /Volumes/Project/React/cvc/local_modules/css-line
+67 error code ENOENT
+68 error errno -2
+69 error syscall open
+70 error enoent ENOENT: no such file or directory, open '/Volumes/Project/React/cvc/local_modules/css-line'
+70 error enoent This is most likely not a problem with npm itself
+70 error enoent and is related to npm not being able to find a file.
+71 verbose exit [ -2, true ]
